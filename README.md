@@ -2,8 +2,10 @@
 
 ```powershell
 # On Windows 10 we can use WSL to run the containers.
-# On a Server 2019+ VM nested virtualization needs to be enabled so Docker can create a small VM to run images.
-# On Server 2019+ it is recommended to have 8GB memory so we are guaranteed that the Docker Desktop VM can start.
+# On a Server 2019+ VM nested virtualization needs to be 
+#   enabled so Docker can create a small VM to run images.
+# On Server 2019+ it is recommended to have 8GB memory so 
+#   we are guaranteed that the Docker Desktop VM can start.
 
 # Install Chocolatey (needed to install git and Docker from the CLI)
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
@@ -23,7 +25,8 @@ git clone https://github.com/cbsch/log4j-scan.git
 cd log4j-scan
 
 # Build the image
-# If this gives an error like "pipe/file not found" it is because the docker service has not completed its first initialization
+# If this gives an error like "pipe/file not found" it is because the docker 
+#   service has not completed its first initialization
 docker build . -t log4j-scan
 
 # Scan some ip:port combinations
